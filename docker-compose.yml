@@ -1,0 +1,11 @@
+
+services:
+  jupyterhub:
+    build: .
+    container_name: jupyterhub-rtc
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/srv/jupyterhub   # persists user notebooks/configs
+      - ./userhomes:/home
+      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
