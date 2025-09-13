@@ -1,6 +1,5 @@
 Setup
 
-1. docker compose build --no-cache && docker compose up -d
-2. Set passwords:
-     docker exec -it jupyterhub-rtc bash
-     passwd <username>
+1. Make userlist.txt - list of username password pairs, comma delimited
+2. chmod +x init-users.sh
+3. docker compose build --no-cache && docker compose up -d
